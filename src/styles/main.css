@@ -1,0 +1,62 @@
+:root {
+  --primary-color: #7B2CBF;
+  --secondary-color: #ad85e0;
+  --light-purple: #C77DFF;
+  --bg-purple: #F2E6FF;
+  --text-color: #333;
+  --border-color: #E0E0E0;
+  --white-color: #FFFFFF;
+  --gray-color: #F5F5F5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Unbounded', -apple-system;
+  /* font-family: 'Unbounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; */
+  line-height: 1.6;
+  color: var(--text-color);
+  /* background-color: #f9f9f9; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.categories-title,
+.product-slider-title {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+  body {
+    font-size: 15px;
+  }
+} 
