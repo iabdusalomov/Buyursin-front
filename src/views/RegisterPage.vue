@@ -1,5 +1,8 @@
 <template>
   <div class="register-page">
+    <router-link to="/" class="home-icon-link" title="На главную">
+      <img src="@/assets/icons/home.svg" alt="На главную" />
+    </router-link>
     <div class="register-container">
       <div class="register-header">
         <img src="@/assets/logo.svg" alt="Buyursin logo" class="register-logo" />
@@ -484,6 +487,32 @@ export default {
   opacity: 0.6;
   cursor: not-allowed;
   text-decoration: none;
+}
+
+.home-icon-link {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.home-icon-link:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.home-icon-link img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
 }
 
 @media (max-width: 600px) {
