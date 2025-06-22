@@ -3,6 +3,7 @@ import HomePage from '@/views/HomePage.vue'
 import LoginPage from '@/views/LoginPage.vue'
 import RegisterPage from '@/views/RegisterPage.vue'
 import ForgotPassword from '../views/ForgotPassword.vue'
+import ProductPage from "@/views/ProductPage.vue"
 
 const routes = [
   {
@@ -27,7 +28,12 @@ const routes = [
     name: 'ForgotPassword',
     component: ForgotPassword,
     meta: { hideForAuth: true }
-  }
+  },
+  {
+    path: '/product/1',
+    name: 'Product Page',
+    component: ProductPage
+  },
 ]
 
 const router = createRouter({

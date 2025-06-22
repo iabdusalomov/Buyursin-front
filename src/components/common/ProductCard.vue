@@ -9,7 +9,7 @@
       <ul class="product-card__features">
         <li v-for="(feature, idx) in product.features" :key="idx">{{ feature }}</li>
       </ul>
-      <button class="product-card__more-btn">More information</button>
+      <router-link :to="'/product/1'" class="product-card__more-link">Подробнее</router-link>
     </div>
   </div>
 </template>
@@ -83,20 +83,24 @@ export default {
   color: #666;
   margin-bottom: 4px;
 }
-.product-card__more-btn {
-  background: var(--secondary-color);
-  color: #fff;
-  border-radius: 24px;
-  padding: 10px 15px;
+.product-card__more-link {
+  /* background: var(--secondary-color);
+  color: #fff; */
+  /* border-radius: 24px;
+  padding: 10px 15px; */
+  color: var(--primary-color);
   font-size: 14px;
   font-weight: 500;
-  align-self: flex-start;
-  /* margin-top: 8px; */
-  transition: background 0.2s;
+  /* transition: background 0.2s; */
+  text-decoration: none;
+  /* margin-top: 4px; */
+  cursor: pointer;
+  /* transition: color 0.2s; */
+  /* display: inline-block; */
 }
-.product-card__more-btn:hover {
-  background: var(--primary-color);
-}
+/* .product-card__more-link:hover {
+  color: var(--secondary-color);
+} */
 @media (max-width: 600px) {
   .product-card {
     width: calc(50vw - 15px);
