@@ -1,20 +1,27 @@
 <template>
   <div id="app-container">
-    <SideBar />
-    <div class="content-wrapper">
-      <AppHeader @open-mobile-menu="openMobileMenu" />
-      <main>
-        <HomePage />
-      </main>
-    </div>
-    <MobileNavDrawer v-if="isMobileMenuOpen" @close="closeMobileMenu" />
+    <!-- Показываем сайдбар и хедер только на главной странице -->
+    <template v-if="$route.path === '/'">
+      <SideBar />
+      <div class="content-wrapper">
+        <AppHeader @open-mobile-menu="openMobileMenu" />
+        <main>
+          <router-view />
+        </main>
+      </div>
+      <MobileNavDrawer v-if="isMobileMenuOpen" @close="closeMobileMenu" />
+    </template>
+    
+    <!-- На страницах авторизации показываем только контент -->
+    <template v-else>
+      <router-view />
+    </template>
   </div>
 </template>
 
 <script>
 import AppHeader from './components/layout/Header.vue'
 import SideBar from './components/layout/SideBar.vue'
-import HomePage from './views/HomePage.vue'
 import MobileNavDrawer from './components/layout/MobileNavDrawer.vue'
 
 export default {
@@ -22,7 +29,6 @@ export default {
   components: {
     AppHeader,
     SideBar,
-    HomePage,
     MobileNavDrawer,
   },
   data() {

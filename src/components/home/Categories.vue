@@ -7,9 +7,9 @@
           <div class="category-card" v-for="category in categories" :key="category.title">
             <img :src="category.img" :alt="category.title" class="category-img" />
           </div>
-          <button class="categories-next-btn">
+          <!-- <button class="categories-next-btn">
             <img src="@/assets/icons/next.svg" alt="Next" class="categories-next-icon" />
-          </button>
+          </button> -->
         </div>
       </div>
     </div>

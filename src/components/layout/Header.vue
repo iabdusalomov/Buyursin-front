@@ -13,6 +13,7 @@
       <div class="header__user">
         <img src="@/assets/icons/user.svg" alt="User" />
       </div>
+      <router-link to="/login" class="header__login-btn">Войти</router-link>
       <button class="header__burger" @click="$emit('open-mobile-menu')">
         <span></span>
         <span></span>
@@ -96,6 +97,21 @@ export default {
   display: block;
 }
 
+.header__login-btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.header__login-btn:hover {
+  background: var(--secondary-color);
+}
+
 .header__burger {
   display: none;
   flex-direction: column;
@@ -146,7 +162,7 @@ export default {
   .header__burger {
     display: flex;
   }
-  .header__nav, .header__user {
+  .header__nav, .header__user, .header__login-btn {
     display: none;
   }
 }

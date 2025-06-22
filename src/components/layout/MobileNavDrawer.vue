@@ -9,6 +9,9 @@
             <span>{{ item.label }}</span>
           </a>
         </li>
+        <router-link to="/login" class="mobile-nav-drawer__login-btn">
+        Войти
+      </router-link>
       </ul>
     </nav>
   </div>
@@ -85,5 +88,18 @@ export default {
 .mobile-nav-drawer__icon {
   width: 28px;
   height: 28px;
+}
+
+.mobile-nav-drawer__login-btn {
+  margin-top: auto;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
 }
 </style> 
